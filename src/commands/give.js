@@ -30,7 +30,7 @@ export default async (msg, client, args) => {
     if (userId.discordId === receiverId.discordId) return msg.reply(`You can't gift yourself!`);
     if (!args[1] || isNaN(int(args[1]))) return msg.reply(`No amount given.`);
     if (!user || !receiver) return msg.reply(`User not found!`);
-    if (parseInt(args[1]) < 100) return msg.reply(`Minimum gift amount is $**100**.`);
+    if (parseInt(args[1]) < 100) return msg.reply(`Minimum gift amount is $**1000000000**.`);
 
     const userBal = user.balance;
     const gift = int(args[1]);
